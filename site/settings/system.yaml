@@ -1,0 +1,7 @@
+app_key: z6Pb7eAtr1bHwr7UYroFRsdDAbqyjWkl
+locales:
+  en:
+    full: en_US
+    name: English
+    url: /
+timezone: America/Los_Angeles
