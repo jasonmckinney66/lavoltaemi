@@ -1,0 +1,35 @@
+<div data-sticky-container>
+  <div data-sticky data-options="marginTop:0;">
+
+    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
+    
+	<div class="top-bar">
+    <div class="top-bar-left" id="example-menu">
+      <ul class="vertical medium-horizontal dropdown menu" data-responsive-menu="accordion medium-dropdown">
+      	
+      	<li class="menu-text"><img src="http://placehold.it/160x50" alt="logo"></li>
+        
+        {{ nav from="/" scope="tag" }}
+        	<li{{ if is_current or is_parent }} class="active"{{ /if }}>
+        	<a href="{{ url }}">{{ tag:nav_title or title }}</a>
+        	</li>
+        {{ /nav }}
+      </ul>
+    </div>
+    
+    <div class="top-bar-right">
+    	<ul class="dropdown menu">
+    		<li><a href="{{ url }}">Products</a></li>
+    		<li><a href="{{ url }}">Cart</a></li>  
+    	</ul>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+
+

@@ -1,0 +1,7 @@
+taxonomies: false
+title: Products
+create_title: Product Settings
+fields:
+  product_title:
+    type: text
+    display: Product Title
