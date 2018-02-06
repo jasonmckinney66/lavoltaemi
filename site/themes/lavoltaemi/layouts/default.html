@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Another awesome Statamic site">
     <title>{{ title or site_title }}</title>
-    <link rel="stylesheet" href="{{ theme:css src='foundation' }}">
+    <link rel="stylesheet" href="{{ theme:css src='foundation.min' }}">
     <link rel="stylesheet" href="{{ theme:css cache_bust='true' }}">
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
@@ -21,6 +21,7 @@
 
 	{{ partial:nav }}
 	{{ template_content }}
+	{{ partial:footer }}
 
     <script src="{{ theme:js src='vendor/jquery' }}"></script>
     <script src="{{ theme:js src='vendor/foundation.min' }}"></script>

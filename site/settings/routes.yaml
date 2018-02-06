@@ -1,5 +1,5 @@
 collections:
-  blog: '/blog/{year}/{month}/{day}/{slug}'
+  blog: /blog
   things: '/things/{slug}'
   products: /products
 taxonomies:
