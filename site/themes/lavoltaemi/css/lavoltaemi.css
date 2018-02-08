@@ -40,8 +40,18 @@ body {
   background: transparent;
 }
 
-.top-bar, .menu, .top-bar, .top-bar ul {
+.top-bar ul {
+	background: transparent;
+}
+
+.top-bar {
   background: transparent;
+  transition:top 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+
+.is-stuck .top-bar {
+  background-color: #666666; 
 }
 
 .top-bar .menu li a {
@@ -63,6 +73,10 @@ body {
 .hero-full-screen .top-bar .menu a {
   color: #fefefe;
   font-weight: bold;
+}
+
+li.logo {
+	
 }
 
 /* Headers */
@@ -132,9 +146,41 @@ body {
 /* Footer */
 
 footer {
-	background-color: #1779ba;
-	padding: 4em 0;
 	margin: 2em 0 0 0;
+	border-top: 1px solid #333;
+}
+
+footer h4, footer h5 {
+	color: #FFF;
+}
+
+footer p {
+	color: #d4d4d4;
+}
+
+.color-strip {
+	background-color: #666;
+	padding: .5em 0;
+}
+.middle {
+	padding: 2em 0;
+	background-color: #7b7b7b;
+}
+
+.social {
+	padding-left: 1em;
+	text-align: right;
+	width: 100%;
+	display: block;
+}
+.social a {
+	margin-left: .6em;
+}
+
+.gutter-small {
+	padding-right: .5rem !important;
+	padding-left: .5rem !important;
+	display: inline-block;
 }
 
 /* Buttons */
@@ -149,6 +195,9 @@ a.button .radius, button.radius {
 .hero-full-screen button.hollow:hover {
 	border: 1px solid #eee;
 	color: #eee;
+}
+.button {
+	text-transform: uppercase;
 }
 
 /* Timeline */
@@ -291,4 +340,12 @@ a.button .radius, button.radius {
   }
 }
 
+/* Products */
 
+.card-divider h4, .card-divider h5  {
+	margin-bottom: .0;
+}
+
+p.label-offset {
+	margin-top: -2em;
+}
