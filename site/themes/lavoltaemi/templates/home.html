@@ -13,6 +13,85 @@
 
 </div>
 
-<div id="content-section" data-magellan-target="content-section" class="row column small-10" style="padding-top: 2rem;">
-	{{ content }}
+<div id="content-section" data-magellan-target="content-section" style="padding-top: 2rem;">
+
+	<section>
+		<div class="row align-center">
+			<div class="small-12 medium-4 columns">
+				<div class="stat text-center">128</div>
+				<p class="text-center">Days without a<br>merge conflict</small>
+			</div>
+			<div class="small-12 medium-4 columns">
+				<div class="stat text-center">128</div>
+				<p class="text-center">Days without a<br>merge conflict</small>
+			</div>
+			<div class="small-12 medium-4 columns">
+				<div class="stat text-center">128</div>
+				<p class="text-center">Days without a<br>merge conflict</p>
+			</div>
+		</div>
+	</section>
+	
+	<section>	
+		<p class="lead">{{ content }}</p>
+	</section>
+	
+	<section class="callout panel">
+		<div class="row">
+			<div class="small-12 medium-6 columns">
+			
+				<h2>Featured Products</h2>
+				<p>Cupcake ipsum dolor sit amet. Jelly beans liquorice donut brownie candy carrot cake muffin jelly muffin. Sweet roll gingerbread sugar plum topping gingerbread cotton candy donut donut gummies.</p>
+				
+				<div class="row">
+					<div class="small-6 columns">
+						<a href="/products/" class="button medium hollow">All Products</a>
+					</div>
+					<div class="small-6 columns">
+						<div class="orbit-controls float-right">
+							<a class="prev-slide orbit-external-control"><i class="fas fa-chevron-left fa-2x"></i></a> &nbsp;&nbsp;&nbsp; <a class="next-slide orbit-external-control"><i class="fas fa-chevron-right fa-2x"></i></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="small-12 columns">
+						<div class="callout primary home">
+							<h4>Launch Sale</h4>
+							<p class="lead">For a limited time, get 20% off your purchase. Enter <code>GETHAPPY</code> at checkout.</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="small-12 medium-6 columns">
+		
+				<div class="orbit" role="region" aria-label="Products" data-orbit data-auto-play=false>
+		 			<div class="orbit-wrapper">
+		 				<ul class="orbit-container">
+							<li class="orbit-slide">
+		            			<ul class="row small-up-1 medium-up-2">
+		                			<li class="column product-slide">{{ partial:product-card }}</li>
+		                    		<li class="column product-slide">{{ partial:product-card }}</li>
+		                 		</ul>
+		            		</li>
+		
+		            		<li class="orbit-slide">
+		                 		<ul class="row small-up-1 medium-up-2">
+		                 			<li class="column product-slide">{{ partial:product-card }}</li>
+		                 			<li class="column product-slide">{{ partial:product-card }}</li>
+		           				</ul>
+		             		</li>
+		   				</ul>
+					</div>
+
+		    		<nav class="orbit-bullets">
+		    			<button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+		    			<button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+		   			</nav>
+		   			
+				</div><!-- /orbit -->
+			</div>
+		</div>
+	</section>
 </div>

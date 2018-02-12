@@ -1,38 +1,69 @@
-<div data-sticky-container>
-  <div data-sticky data-options="marginTop:0;">
+<div class="off-canvas-wrapper">
 
-    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-      <div class="title-bar-title">Menu</div>
-    </div>
-    
-	<div class="top-bar">
-    <div class="top-bar-left" id="example-menu">
-      <ul class="vertical medium-horizontal dropdown menu" data-responsive-menu="accordion medium-dropdown">
+	<!-- Mobile Off-Canvas -->
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
+    	
+    	<div class="close">
+      		<button class="close-button" aria-label="Close menu" type="button" data-close>
+        		<span aria-hidden="true">&times;</span>
+      		</button>
+      	</div>
+      
+      	<ul class="vertical menu">
+      		{{ nav from="/" scope="tag" include_home="true" }}
+      		<li{{ if is_current or is_parent }} class="active"{{ /if }}>
+      			<a href="{{ url }}">{{ tag:nav_title or title }}</a>
+      		</li>
+      		{{ /nav }}
+      	</ul>
       	
-      	<li>
-      		<a href="/"><img src="http://placehold.it/160x50" alt="logo"></a>
-      	</li>
-        
-        {{ nav from="/" scope="tag" exclude="products" }}
-        	<li{{ if is_current or is_parent }} class="active"{{ /if }}>
-        		<a href="{{ url }}">{{ tag:nav_title or title }}</a>
-        	</li>
-        {{ /nav }}
-        
-      </ul>
-    </div>
+	</div>
     
-    <div class="top-bar-right">
-    	<ul class="dropdown menu">
-    		<li><a href="/products">Products</a></li>
-    		<li><a href="{{ url }}">Cart</a></li>  
-    	</ul>
-    </div>
-    </div>
+    <!-- Desktop -->
+    <div class="off-canvas-content" data-off-canvas-content>
 
-  </div>
-</div>
+		<div data-sticky-container>
+		
+			<div data-sticky data-options="marginTop:0;">
 
+				<div class="top-bar">
+			
+    				<div class="top-bar-left show-for-large" id="example-menu">
+    					
+      					<ul class="vertical medium-horizontal dropdown menu show-for-large" data-responsive-menu="accordion medium-dropdown">
+      						<li>
+      							<a href="/"><img src="http://placehold.it/160x50" alt="logo"></a>
+      						</li>
+        
+        					{{ nav from="/" scope="tag" exclude="products" }}
+        					<li{{ if is_current or is_parent }} class="active"{{ /if }}>
+        						<a href="{{ url }}">{{ tag:nav_title or title }}</a>
+        					</li>
+        					{{ /nav }}
+      					</ul>
+    				</div>
+    
+    				<div class="top-bar-right show-for-large">
+    					<ul class="dropdown menu">
+    						<li {{ if segment_1 == 'products' }}class="active"{{ /if }}><a href="/products">Products</a></li>
+    						<li><a href="{{ url }}"><i class="fas fa-shopping-bag" style="color:white"></i></a></li>  
+    					</ul>
+    					
+    				</div>
+    				
+    				<!-- Mobile Top Nav -->
+    
+    				<div class="small-6 columns hide-for-large">
+    					<a href="/" class="hide-for-large logo"><img src="http://placehold.it/160x50" alt="logo"></a>
+    				</div>
+    				<div class="small-6 columns hide-for-large">
+    					<a data-toggle="offCanvas" class="float-right"><i class="fas fa-bars fa-2x" style="color: white;"></i></a>
+    				</div>
 
+    			
+    			</div><!--/top-bar-->
+    		
+  			</div><!--/sticky-container-->
+  		
+		</div><!--/off-canvas-content-->
 

@@ -1,0 +1,34 @@
+{{ partial:header }}
+
+<div class="container">
+
+	<section>
+		<div class="row align-center">
+			<div class="small-12 medium-10 columns">
+				{{ content }}
+			</div>
+		</div>
+	</section>
+    
+	<section class="callout panel">
+		<div class="row small-up-1 medium-up-2 large-up-4">
+	
+			<div class="column column-block">
+				{{ if segment_1 === "video" }}
+					{{ collection:videos group_by_date="M Y" as="entries" }}
+				    	{{ date_groups }}
+				        	{{ partial:video-card }}
+				    	{{ /date_groups }}
+					{{ /collection:videos }}
+				{{ else }}
+					{{ collection:products }}
+					    	{{ partial:product-card }}
+					{{ /collection:products }}
+				{{ /if }}
+				
+			</div>
+					
+		</div>
+	</section>
+	
+</div>

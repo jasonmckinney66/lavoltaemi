@@ -1,0 +1,13 @@
+taxonomies: false
+title: Videos
+create_title: ""
+fields:
+  video_id:
+    type: text
+    display: Video ID
+  new:
+    type: toggle
+    display: new
+  short_description:
+    type: textarea
+    display: Short Description

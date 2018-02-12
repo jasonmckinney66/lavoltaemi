@@ -2,22 +2,36 @@
 
 <div class="container">
 
-    {{ content }}
-    
-    <div class="row">
-    	<div class="small-12 medium-3 columns">
-    		<h4>Drop Us a Note</h4>
-    		<div class="row expanded">
-    			<div class="small-12 medium-5 columns">
-    				<input type="text" placeholder="Name">
-    				<input type="email" placeholder="Email">
+	<section>
+		<div class="row align-center">
+			<div class="small-12 medium-5 columns">
+    			{{ content }}
+    		</div>
+    		<div class="small-12 medium-5 columns">
+    			<p class="text-center callout secondary">A big map</p>
+    		</div>
+		</div>
+	</section>
+
+	<section class="callout panel">
+    	<div class="row align-center">
+    		<div class="small-12 medium-10 columns">
+    			<h4>Drop Us a Note</h4>
+    			<div class="row">
+    				<div class="small-12 medium-5 columns">
+    					<input type="text" placeholder="Name">
+    					<input type="email" placeholder="Email">
+    				</div>
+    				<div class="small-12 medium-7 columns">
+    					<textarea placeholder="Message" rows="3"></textarea>
+    				</div>
+    				<div class="small-12 columns">
+    					<a class="button medium" href="#">Submit</a>
+    				</div>
     			</div>
-    			<div class="small-12 medium-7 columns">
-    				<textarea placeholder="Message" rows="3"></textarea>
-    			</div>
-    			<a class="button expanded hollow" href="#">Submit</a>
     		</div>
     	</div>
-    </div>
+	</section>
+    
 </div>
 
