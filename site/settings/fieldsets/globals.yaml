@@ -1,8 +1,13 @@
 title: Default Globals
 hide: true
+taxonomies: false
 fields:
   site_name:
     type: text
     display: Website Name
     instructions: The name of your website
     localizable: true
+  snipcart_root:
+    type: text
+    display: Snipcart Root
+    instructions: This is just for local development and testing the cart.

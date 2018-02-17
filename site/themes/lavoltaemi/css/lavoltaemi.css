@@ -95,8 +95,8 @@ body {
 .off-canvas {
 	background: #484848;
 }
-.js-off-canvas-overlay {
-	background: rgba(0, 0, 0, 0.4);
+.js-off-canvas-overlay, .reveal-overlay {
+	background: rgba(0, 0, 0, 0.7);
 }
 .close {
 	display: inline-block;
@@ -284,10 +284,6 @@ footer span.date {
 	margin-left: 0 !important;
 }
 
-.tabs-content {
-	border: none;
-}
-
 .callout.panel {
 	border: none;
 	padding: 4em 0;
@@ -473,12 +469,23 @@ li.product-slide {
 	list-style: none;
 }
 
-/* Videos */
-.vp-player-layout {
-	width: 100%;
-	left: 0;
+h3.price {
+	margin: 1em 0;
+	font-weight: bold;
 }
+
+.tabs-content {
+    background: none;
+    border: none;
+}
+
+/* Videos */
+.vimeo {
+	margin-top: 1.5em;
+}
+
 body.section-video .img-holder {
 	background: black;
-	padding-top: 8px;
+	max-height: 157px;
+	overflow: hidden;
 }

@@ -1,25 +1,30 @@
-<div class="card">
+<div class="card" data-equalizer data-equalize-on="medium" >
 	<div class="img-holder">
-	
+		{{ if sale }}
 		<div class="ribbon-wrapper-green">
 			<div class="ribbon-green">SALE</div>
 		</div>
+		{{ endif }}
 		
-		<a href="/products/commemorative-mug"><img src="https://placehold.it/325x160"></a>
-		
-	</div>
-	
-	<div class="card-section">
-		<p class="text-center label-offset"><span class="label">Default Label</span></p>
-		<h5><strong>Commemorative Mug</strong></h5>
-		<p>This is the short description of the product</p>
-		
-		<!--<span class="sale"><h4 class="text-center">25% OFF &nbsp;-&nbsp; <a href="/products/commemorative-mug">$100.00</a></h4></span>-->
-		
-		<a href="/products/commemorative-mug"><h4 class="text-center">$100.00</h4></a>
+		{{ assets:product_image }}
+			<a href="{{ url }}"><img src="{{ glide:url width="310" height="200" fit="crop" }}"></a>
+		{{ /assets:product_image }}
 		
 	</div>
 	
-	<a href="/products/commemorative-mug" class="button expanded">More</a>
+	<div class="card-section" data-equalizer-watch>
+		<p class="text-center label-offset"><span class="label">Taxonomy</span></p>
+		<h5><strong>{{ title }}</strong></h5>
+		<p>{{ short_description }}</p>
+	</div>
+
+		{{ if !sale_price }}
+			<a href="{{ url }}"><h4 class="text-center">${{ price }}</h4></a>
+		{{ else }}
+			<h4 class="text-center"><span style="text-decoration: line-through;">${{ price }}</span> &nbsp;&nbsp; <a href="{{ url }}" class="sale">${{ sale_price }}</h4></a>
+		{{ endif }}
+
+	
+	<a href="{{ url }}" class="button expanded">More</a>
 	
 </div>

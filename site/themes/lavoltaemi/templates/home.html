@@ -7,15 +7,15 @@
     <button class="button large radius primary">A Button</button> &nbsp;&nbsp; <button class="button large radius hollow">Another Button</button>
   </div>
 
-	<div class="bottom-content-section" data-magellan data-threshold="-50">
+	<div class="bottom-content-section" data-magellan data-threshold="-150" data-offset="130">
 		<a href="#content-section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z"/></svg></a>
 	</div>
 
 </div>
 
-<div id="content-section" data-magellan-target="content-section" style="padding-top: 2rem;">
+<div id="content-section" data-magellan-target="content-section">
 
-	<section>
+	<section class="callout panel">
 		<div class="row align-center">
 			<div class="small-12 medium-4 columns">
 				<div class="stat text-center">128</div>
@@ -32,8 +32,12 @@
 		</div>
 	</section>
 	
-	<section>	
-		<p class="lead">{{ content }}</p>
+	<section>
+		<div class="row align-center">
+			<div class="small-12 medium-10 columns">
+				<p class="lead">{{ content }}</p>
+			</div>
+		</div>
 	</section>
 	
 	<section class="callout panel">
@@ -69,19 +73,24 @@
 				<div class="orbit" role="region" aria-label="Products" data-orbit data-auto-play=false>
 		 			<div class="orbit-wrapper">
 		 				<ul class="orbit-container">
+		 					{{ if featured_products_1 }}
 							<li class="orbit-slide">
 		            			<ul class="row small-up-1 medium-up-2">
-		                			<li class="column product-slide">{{ partial:product-card }}</li>
-		                    		<li class="column product-slide">{{ partial:product-card }}</li>
+		            				{{ relate:featured_products_1 }}
+		                				<li class="column product-slide">{{ partial:product-card }}</li>
+		                			{{ /relate:featured_products_1 }}
 		                 		</ul>
 		            		</li>
-		
+		            		{{ endif }}
+		            		{{ if featured_products_2 }}
 		            		<li class="orbit-slide">
-		                 		<ul class="row small-up-1 medium-up-2">
-		                 			<li class="column product-slide">{{ partial:product-card }}</li>
-		                 			<li class="column product-slide">{{ partial:product-card }}</li>
-		           				</ul>
-		             		</li>
+		            			<ul class="row small-up-1 medium-up-2">
+		            				{{ relate:featured_products_2 }}
+		            					<li class="column product-slide">{{ partial:product-card }}</li>
+		            				{{ /relate:featured_products_2 }}
+		            			</ul>
+		            		</li>
+		            		{{ endif }}
 		   				</ul>
 					</div>
 

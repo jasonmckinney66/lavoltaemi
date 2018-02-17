@@ -1,15 +1,11 @@
-app_key: z6Pb7eAtr1bHwr7UYroFRsdDAbqyjWkl
 locales:
   en:
     full: en_US
     name: English
     url: /
 timezone: America/Los_Angeles
-license_key: ""
 date_format: F jS, Y
 default_extension: md
-send_powered_by_header: true
-ensure_unique_ids: false
 filesystems:
   content:
     driver: local
@@ -24,6 +20,7 @@ filesystems:
     driver: local
     root: site/themes
     url: /site/themes
+app_key: z6Pb7eAtr1bHwr7UYroFRsdDAbqyjWkl
 redactor:
   - 
     name: Standard
@@ -35,6 +32,11 @@ redactor:
         - link
         - unorderedlist
         - orderedlist
+        - alignment
+        - horizontalrule
+        - image
+        - file
+        - video
         - html
   - 
     name: Basic
@@ -42,5 +44,5 @@ redactor:
       buttons:
         - bold
         - italic
-csrf_exclude: [ ]
-php_max_memory_limit: null
+send_powered_by_header: true
+ensure_unique_ids: false

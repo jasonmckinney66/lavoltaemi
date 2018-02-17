@@ -2,6 +2,68 @@ taxonomies: false
 title: Products
 create_title: Product Settings
 fields:
-  product_title:
+  product_image:
+    type: assets
+    display: Product Image
+    container: main
+    folder: img/products
+    width: 50
+    restrict: true
+    max_files: 1
+    mode: grid
+  alternate_views:
+    type: assets
+    display: Alternate Views
+    container: main
+    folder: img/products
+    restrict: true
+    max_files: 4
+    width: 50
+  short_description:
+    type: redactor
+    display: Short Description
+    width: 50
+    settings: Basic
+    container: main
+    folder: img/products
+    restrict_assets: true
+    validate: max:76
+  full_description:
+    type: redactor
+    display: Full Description
+    width: 50
+  product_details:
+    type: section
+    display: Product Details
+  size:
+    type: list
+    display: Size
+    width: 25
+  color:
+    type: list
+    display: Color
+    width: 25
+  price:
     type: text
-    display: Product Title
+    display: Price
+    width: 25
+    instructions: No dollar sign.
+  item_weight:
+    type: text
+    display: Item Weight
+    width: 25
+    instructions: In grams.
+  sale_section:
+    type: section
+    display: Sale Section
+  sale:
+    type: toggle
+    display: Sale
+    width: 33
+  sale_price:
+    type: text
+    display: Sale Price
+    width: 33
+    instructions: No dollar sign.
+    show_when:
+      sale: true

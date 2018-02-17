@@ -22,6 +22,7 @@ fields:
     folder: img
     max_files: 1
   content:
-    type: markdown
+    type: redactor
     display: Content
     localizable: true
+    image_dir: assets/img/blog/

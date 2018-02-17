@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" data-equalizer-watch>
 	<div class="img-holder">
 		{{ if new }}
 		<div class="ribbon-wrapper-green">
@@ -6,14 +6,24 @@
 		</div>
 		{{ endif }}
 		
-		<iframe src="https://player.vimeo.com/video/{{ entries }}{{ video_id }}{{ /entries }}?color=ffffff&title=0&byline=0&portrait=0" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<a data-open="movieModal-{{ index }}"><img src="https://i.vimeocdn.com/video/{{ thumb_id }}_330.jpg"></a>
 		
 	</div>
 	
 	<div class="card-section">
-		<h5><strong>{{ entries }}{{ title }}{{ /entries }}</strong></h5>
+		<h5><strong>{{ title }}</strong></h5>
 		<small>{{ date_group }}</small>
-		<p>{{ entries }}{{ short_description }}{{ /entries }}</p>
+		<p>{{ short_description }}</p>
 	</div>
+	<button class="button expanded" data-open="movieModal-{{ index }}">Play</button>
 	
+</div>
+
+<div class="large reveal" id="movieModal-{{ index }}" data-reveal data-reset-on-close="true" data-animation-in="scale-in-up" data-animation-out="fade-out">
+	<div class="flex-video vimeo widescreen">
+		<iframe src="https://player.vimeo.com/video/{{ video_id }}?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	</div>
+	<button class="close-button" data-close aria-label="Close modal" type="button">
+		<span aria-hidden="true">&times;</span>
+	</button>
 </div>

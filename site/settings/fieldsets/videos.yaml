@@ -2,12 +2,16 @@ taxonomies: false
 title: Videos
 create_title: ""
 fields:
-  video_id:
-    type: text
-    display: Video ID
   new:
     type: toggle
     display: new
+  video_id:
+    type: text
+    display: Video ID
+  thumb_id:
+    type: text
+    display: Thumb ID
+    instructions: https://deponewd.github.io/video/
   short_description:
     type: textarea
     display: Short Description

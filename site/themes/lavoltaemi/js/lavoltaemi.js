@@ -52,5 +52,17 @@ $( document ).ready(function() {
 	  $('.orbit').foundation('changeSlide', isLTR, chosenSlide, changeIdx) 
 	})
 	
+	//SnipCart
+	$('#my-quantity').change(function() {
+	    $('#my-button').data('item-quantity', $(this).val());
+	});
+	$('#my-size').change(function() {
+	    $('#my-button').data('item-custom1-value', $(this).val());
+	});
+	$('#my-color').change(function() {
+	    $('#my-button').data('item-custom2-value', $(this).val());
+	});
+	Snipcart.execute('config', 'show_continue_shopping', true);
+	
 });
 

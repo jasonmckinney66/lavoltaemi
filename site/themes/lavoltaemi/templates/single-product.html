@@ -6,54 +6,87 @@
 	<article>
 		<div class="row">
 			<div class="small-12 medium-6 columns">
-      
-				<img id="largeImage" class="thumbnail" src="https://source.unsplash.com/random/720x420">
-      
+			
+      			{{ assets:product_image }}
+					<img id="largeImage" class="thumbnail" src="{{ glide:url width="672" height="395" fit="crop" }}">
+				{{ /assets:product_image }}
+      			
+      			{{ if alternate_views }}
 				<div class="row small-up-2 medium-up-4 thumb-container">
+				{{ assets:alternate_views }}
 					<div id="thumbs" class="column column-block gutter-small">
-						<img src="https://source.unsplash.com/random/720x420" alt="1st image description">
+						<img src="{{ url }}" alt="{{ alt }}">
 					</div>
-          			<div id="thumbs" class="column column-block gutter-small">
-            			<img src="https://source.unsplash.com/random/720x420" alt="2nd image description">
-          			</div>
-          			<div id="thumbs" class="column column-block gutter-small">
-            			<img src="https://source.unsplash.com/random/720x420" alt="3rd image description">
-          			</div>
-          			<div id="thumbs" class="column column-block gutter-small">
-            			<img src="https://source.unsplash.com/random/720x420" alt="4th image description">
-          			</div>
-          			
+				{{ /assets:alternate_views }}
         		</div>
+        		{{ endif }}
+        		
 			</div>
 			
       		<div class="small-12 medium-6 columns">
       
-        		<h3>{{ title }}</h3>
-        		<p>{{ content }}</p>
-        		<p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in.</p>
+        		<h2>{{ title }}</h2>
+        		<p>{{ full_description }}</p>
 				<div class="row">
-					<div class="small-12 medium-6 columns">
+					{{ if size }}
+					<div class="small-12 medium-4 columns">
         				<label>Size</label>
-        				<select>
-          					<option value="husker">Small</option>
-          					<option value="starbuck">Medium</option>
-          					<option value="hotdog">Large</option>
-          					<option value="apollo">Yeti</option>
+        				<select id="my-size">
+        					{{ size }}
+          					<option value="{{ value }}">{{ value }}</option>
+							{{ /size }}
         				</select>
         			</div>
-        			
-          			<div class="small-12 medium-6 columns">
+        			{{ endif }}
+        			{{ if color }}
+        			<div class="small-12 medium-4 columns">
+        				<label>Color</label>
+        				<select id="my-color">
+        					{{ color }}
+        						<option value="{{ value }}">{{ value }}</option>
+        					{{ /color }}
+        				</select>
+        			</div>
+        			{{ endif }}
+          			<div class="small-12 medium-4 columns">
             			<label>Quantity</label>
-            			<input type="text">
+            			<input type="number" value="1" id="my-quantity">
         			</div>
 				</div>
 				
-        		<a href="#" class="button large expanded">Buy Now</a>
+				{{ if !sale_price }}
+					<a href="{{ url }}"><h3>${{ price }}</h3></a>
+				{{ else }}
+					<h3><span style="text-decoration: line-through;">${{ price }}</span> &nbsp;&nbsp; <a href="{{ url }}" class="sale">${{ sale_price }}</h3></a>
+				{{ endif }}
+        		
+        		<button type="button" class="snipcart-add-item button large expanded" id="my-button" 
+        		 data-item-name="{{ title }}"
+        		 data-item-price="{{ if sale_price }}{{ sale_price }}{{ else }}{{ price }}{{ endif }}"
+        		 data-item-id="{{ id }}"
+        		 data-item-categories=""
+        		 data-item-weight="{{ item_weight }}"
+        		 data-item-quantity="1"
+        		 {{ if color }}
+        		 data-item-custom2-name="Color"
+        		 data-item-custom2-options="{{ color }}{{ value }}|{{ /color }}"
+        		 data-item-custom2-value="Red"
+        		 {{ endif }}
+        		 {{ if size }}
+        		 data-item-custom1-name="Size"
+        		 data-item-custom1-options="{{ size }}{{ value }}|{{ /size }}"
+        		 data-item-custom1-value="Small"
+        		 {{ endif }}
+        		 data-item-image="{{ site_settings:snipcart_root }}{{ asset:alternate_views }}{{ url }}{{ /asset:alternate_views }}"
+        		 data-item-url="{{ site_settings:snipcart_root }}{{ url }}">
+        		  Add to cart
+        		</button>
 
-        		<div class="small secondary expanded button-group">
-            		<a class="button">Facebook</a>
-            		<a class="button">Twitter</a>
-            		<a class="button">Google+</a>
+        		<div class="small secondary button-group">
+            		<a class="button"><i class="fab fa-facebook fa-2x"></i></a>
+            		<a class="button"><i class="fab fa-twitter-square fa-2x"></i></a>
+            		<a class="button"><i class="fab fa-google-plus-square fa-2x"></i></a>
+            		<a class="button"><i class="fab fa-pinterest-square fa-2x"></i></a>
           		</div>
           		
         	</div>
@@ -75,7 +108,7 @@
           				<small>(Powered by Disqus)</small>
           				<div class="media-object stack-for-small">
             				<div class="media-object-section">
-              					<img class="thumbnail" src="https://placehold.it/200x200">
+              					<img class="thumbnail" src="https://source.unsplash.com/user/vanschneider/200x200">
             				</div>
             			<div class="media-object-section">
               				<h5>Mike Stevenson</h5>
@@ -85,7 +118,7 @@
           			
           			<div class="media-object stack-for-small">
             			<div class="media-object-section">
-              				<img class="thumbnail" src="https://placehold.it/200x200">
+              				<img class="thumbnail" src="https://source.unsplash.com/user/vanschneider/200x200">
             			</div>
             			<div class="media-object-section">
               				<h5>Mike Stevenson</h5>
@@ -107,10 +140,10 @@
               				{{ partial:product-card }}
             			</div>
             			<div class="column column-block gutter-small">
-            					{{ partial:product-card }}
+            				{{ partial:product-card }}
             			</div>
             			<div class="column column-block gutter-small">
-            					{{ partial:product-card }}
+            				{{ partial:product-card }}
             			</div>
             			
             		</div>
