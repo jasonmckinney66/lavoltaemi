@@ -4,6 +4,8 @@ console.log(Foundation.version);
 
 $( document ).ready(function() {
 
+	$('#body').animate({"opacity":"1"}, 600);
+
 	/* Custom Slider button controls
 	$(".next-slide").click(function() {
 		var activeIdx = ~~$('.orbit .orbit-bullets .is-active').data('product-slider')
@@ -32,7 +34,7 @@ $( document ).ready(function() {
     	console.log('clicked');
 	});
 	
-	
+	// Custom Slider button controls
 	$('.orbit-external-control').on('click', function () {
 	  var activeIdx = ~~$('.orbit .orbit-bullets .is-active').data('data-slide');
 	  console.log(activeIdx);
@@ -63,6 +65,45 @@ $( document ).ready(function() {
 	    $('#my-button').data('item-custom2-value', $(this).val());
 	});
 	Snipcart.execute('config', 'show_continue_shopping', true);
+	
+	// Fancybox
+	
+	$('[data-fancybox="video"]').fancybox({
+	  afterLoad : function( instance, current ) {
+	
+	     // Remove scrollbars and change background
+	    current.$content.css({
+				overflow   : 'visible',
+	      background : '#000'
+			});
+				    
+	  },
+	  onUpdate : function( instance, current ) {
+	    var width,
+	        height,
+	        ratio = 16 / 9,
+	        video = current.$content;
+	    
+	    if ( video ) {
+	      video.hide();
+	
+	      width  = current.$slide.width();
+	      height = current.$slide.height() - 100;
+	      
+	      if ( height * ratio > width ) {
+	        height = width / ratio;
+	      } else {
+	        width = height * ratio;
+	      }
+	
+	      video.css({
+	        width  : width,
+	        height : height
+	      }).show();
+	
+	    }
+	  }
+	})
 	
 });
 

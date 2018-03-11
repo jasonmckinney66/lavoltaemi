@@ -1,6 +1,12 @@
 {{ partial:header }}
 
 <div class="container">
-    {{ content }}
+
+	<section>
+		{{ body }}
+      		{{ partial src="sets/{type}" }}
+    	{{ /body }}
+	</section>
+	
 </div>
 

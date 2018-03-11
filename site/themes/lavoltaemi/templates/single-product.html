@@ -54,12 +54,18 @@
         			</div>
 				</div>
 				
-				{{ if !sale_price }}
-					<a href="{{ url }}"><h3>${{ price }}</h3></a>
-				{{ else }}
-					<h3><span style="text-decoration: line-through;">${{ price }}</span> &nbsp;&nbsp; <a href="{{ url }}" class="sale">${{ sale_price }}</h3></a>
-				{{ endif }}
-        		
+				<div class="row">
+					<div class="small-12 medium-12 columns">
+					{{ if !sale_price }}
+						<h3>${{ price }}</h3>
+					{{ else }}
+						<h3><span style="text-decoration: line-through;">${{ price }}</span> &nbsp;&nbsp; <span class="sale">${{ sale_price }}</span></h3>
+					{{ endif }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 medium-6 columns">
+					        		
         		<button type="button" class="snipcart-add-item button large expanded" id="my-button" 
         		 data-item-name="{{ title }}"
         		 data-item-price="{{ if sale_price }}{{ sale_price }}{{ else }}{{ price }}{{ endif }}"
@@ -81,12 +87,22 @@
         		 data-item-url="{{ site_settings:snipcart_root }}{{ url }}">
         		  Add to cart
         		</button>
-
-        		<div class="small secondary button-group">
-            		<a class="button"><i class="fab fa-facebook fa-2x"></i></a>
-            		<a class="button"><i class="fab fa-twitter-square fa-2x"></i></a>
-            		<a class="button"><i class="fab fa-google-plus-square fa-2x"></i></a>
-            		<a class="button"><i class="fab fa-pinterest-square fa-2x"></i></a>
+        		
+        			</div>
+					<div class="small-12 medium-6 columns">
+						<a href="/products" class="button large hollow expanded">Continue Shopping</a>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="small-12 medium-12 columns">
+        				<div class="small secondary button-group">
+            				<a class="button"><i class="fab fa-facebook fa-2x"></i></a>
+            				<a class="button"><i class="fab fa-twitter-square fa-2x"></i></a>
+            				<a class="button"><i class="fab fa-google-plus-square fa-2x"></i></a>
+            				<a class="button"><i class="fab fa-pinterest-square fa-2x"></i></a>
+          				</div>
+          			</div>
           		</div>
           		
         	</div>

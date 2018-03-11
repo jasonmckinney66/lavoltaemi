@@ -1,6 +1,7 @@
 taxonomies: false
 title: Videos
 create_title: ""
+hide: true
 fields:
   new:
     type: toggle

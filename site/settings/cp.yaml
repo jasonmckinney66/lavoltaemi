@@ -7,6 +7,10 @@ widgets:
     collection: products
     limit: 20
   - 
+    type: collection
+    collection: videos
+    limit: 20
+  - 
     type: form
     form: contact
     limit: 5

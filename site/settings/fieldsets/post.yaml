@@ -1,5 +1,6 @@
 title: Blog Post
 hide: true
+taxonomies: false
 fields:
   title:
     type: title
@@ -26,3 +27,10 @@ fields:
     display: Content
     localizable: true
     image_dir: assets/img/blog/
+  excerpt:
+    type: redactor
+    display: Excerpt
+    settings: Basic
+    container: main
+    folder: img/blog
+    restrict_assets: true

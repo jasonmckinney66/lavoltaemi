@@ -15,6 +15,9 @@
       			<a href="{{ url }}">{{ tag:nav_title or title }}</a>
       		</li>
       		{{ /nav }}
+      		<li{{ if is_current or is_parent }} class="active"{{ /if }}>
+      				<a href="#" class="snipcart-checkout">My Cart</a>
+      		</li>
       	</ul>
       	
 	</div>
@@ -44,9 +47,9 @@
     				</div>
     
     				<div class="top-bar-right show-for-large">
-    					<ul class="dropdown menu">
-    						<li {{ if segment_1 == 'products' }}class="active"{{ /if }}><a href="/products">Products</a></li>
-    						<li><a href="{{ url }}"><i class="fas fa-shopping-bag" style="color:white"></i></a></li>  
+    					<ul class="menu">
+    						<li {{ if segment_1 == 'products' }}class="active"{{ /if }}><a href="/products" class="button small radius">Products</a></li>
+    						<li><a href="#" class="snipcart-checkout button hollow basket"><i class="fas fa-shopping-bag" style="color:white"></i></a></li>  
     					</ul>
     					
     				</div>

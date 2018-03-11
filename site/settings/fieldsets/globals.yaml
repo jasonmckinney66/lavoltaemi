@@ -7,7 +7,13 @@ fields:
     display: Website Name
     instructions: The name of your website
     localizable: true
+  snipcart:
+    type: section
+    display: Snipcart
   snipcart_root:
     type: text
     display: Snipcart Root
     instructions: This is just for local development and testing the cart.
+  snipcart_key:
+    type: text
+    display: Snipcart API Key

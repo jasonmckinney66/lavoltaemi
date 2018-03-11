@@ -6,7 +6,7 @@
 		</div>
 		{{ endif }}
 		
-		<a data-open="movieModal-{{ index }}"><img src="https://i.vimeocdn.com/video/{{ thumb_id }}_330.jpg"></a>
+		<a href="https://player.vimeo.com/video/{{ video_id }}?color=ffffff&title=0&byline=0&portrait=0" data-fancybox ><img src="https://i.vimeocdn.com/video/{{ thumb_id }}_330.jpg"></a>
 		
 	</div>
 	
@@ -15,15 +15,6 @@
 		<small>{{ date_group }}</small>
 		<p>{{ short_description }}</p>
 	</div>
-	<button class="button expanded" data-open="movieModal-{{ index }}">Play</button>
+	<a href="https://player.vimeo.com/video/{{ video_id }}?color=ffffff&title=0&byline=0&portrait=0" data-fancybox="video" class="button expanded">Play</a>
 	
-</div>
-
-<div class="large reveal" id="movieModal-{{ index }}" data-reveal data-reset-on-close="true" data-animation-in="scale-in-up" data-animation-out="fade-out">
-	<div class="flex-video vimeo widescreen">
-		<iframe src="https://player.vimeo.com/video/{{ video_id }}?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-	</div>
-	<button class="close-button" data-close aria-label="Close modal" type="button">
-		<span aria-hidden="true">&times;</span>
-	</button>
 </div>

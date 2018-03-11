@@ -1,5 +1,6 @@
 site_name: Test Website
-snipcart_root: http://b61af2ee.ngrok.io
+snipcart_root: http://39b707be.ngrok.io/
+snipcart_key: MTljZGYzNjUtNThhNy00YjA1LTg0YzAtOGI2MjViN2Q2ODA2NjM2NTMxNDM1MDA4NjUwNzkw
 fieldset: globals
 title: Site Settings
 id: 0b092bc6-4289-457e-803c-ebf23361fc4f

@@ -1,6 +1,7 @@
 taxonomies: false
 title: Products
 create_title: Product Settings
+hide: true
 fields:
   product_image:
     type: assets
@@ -67,3 +68,11 @@ fields:
     instructions: No dollar sign.
     show_when:
       sale: true
+  categories:
+    type: section
+    display: Categories
+  product_categories:
+    type: taxonomy
+    display: Product Categories
+    taxonomy: products
+    mode: panes
