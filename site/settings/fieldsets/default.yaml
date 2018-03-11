@@ -1,0 +1,69 @@
+taxonomies: false
+title: Default
+create_title: ""
+fields:
+  body:
+    type: replicator
+    display: Body
+    sets:
+      text:
+        display: Text
+        fields:
+          content:
+            type: redactor
+            display: Content
+            settings: Standard
+            container: main
+            folder: img
+            width: 75
+          columns:
+            type: radio
+            display: Column
+            options:
+              left: Left
+              right: Right
+              full: Full
+            width: 25
+            default: full
+      subheadline:
+        display: Subheadline
+        fields:
+          subheadline_text:
+            type: text
+            display: Subheadline Text
+      image:
+        display: Image
+        fields:
+          inline_image:
+            type: assets
+            display: Inline Image
+            container: main
+            folder: img
+            restrict: true
+            max_files: 1
+            width: 50
+          alignment:
+            type: radio
+            display: Alignment
+            options:
+              left: Left
+              right: Right
+              center: Center
+            width: 50
+            default: center
+      quote:
+        display: Quote
+        fields:
+          quote_text:
+            type: textarea
+            display: Quote Text
+            width: 50
+          attribution:
+            type: text
+            display: Attribution
+      table:
+        display: Table
+        fields:
+          table:
+            type: table
+            display: Table

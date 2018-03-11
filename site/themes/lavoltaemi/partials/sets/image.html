@@ -1,0 +1,19 @@
+{{ if alignment == "right" }}
+
+	<div class="small-12 medium-3 columns">
+		<img src="{{ inline_image }}" alt="{{ alt }}">
+	</div>
+
+{{ elseif alignment == "left" }}
+
+	<div class="small-12 medium-3 large-pull-7 columns">
+		<img src="{{ inline_image }}" alt="{{ alt }}">
+	</div>
+
+{{ else }}
+
+	<div class="small-12 medium-10 columns">
+		<img src="{{ inline_image }}" alt="{{ alt }}">
+	</div>
+	
+{{ endif }}

@@ -1,0 +1,8 @@
+taxonomies: false
+title: Taxonomies
+create_title: ""
+hide: true
+fields:
+  optional_description:
+    type: textarea
+    display: Optional Description
