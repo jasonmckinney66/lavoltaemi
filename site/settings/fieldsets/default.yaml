@@ -31,6 +31,11 @@ fields:
           subheadline_text:
             type: text
             display: Subheadline Text
+            width: 75
+          center:
+            type: toggle
+            display: Center
+            width: 25
       image:
         display: Image
         fields:

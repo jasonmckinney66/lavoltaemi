@@ -392,6 +392,10 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
             array (
                 0 => __DIR__ . '/..' . '/doctrine/inflector/lib',
             ),
+            'Detection' => 
+            array (
+                0 => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/namespaced',
+            ),
         ),
         'A' => 
         array (
@@ -874,6 +878,7 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
         'DebugBar\\Storage\\PdoStorage' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Storage/PdoStorage.php',
         'DebugBar\\Storage\\RedisStorage' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Storage/RedisStorage.php',
         'DebugBar\\Storage\\StorageInterface' => __DIR__ . '/..' . '/maximebf/debugbar/src/DebugBar/Storage/StorageInterface.php',
+        'Detection\\MobileDetect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/namespaced/Detection/MobileDetect.php',
         'Doctrine\\Common\\Inflector\\Inflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php',
         'Dotenv' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Dotenv.php',
         'GuzzleHttp\\Client' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Client.php',
@@ -1750,6 +1755,7 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
         'Michelf\\Markdown' => __DIR__ . '/..' . '/michelf/php-markdown/Michelf/Markdown.php',
         'Michelf\\MarkdownExtra' => __DIR__ . '/..' . '/michelf/php-markdown/Michelf/MarkdownExtra.php',
         'Michelf\\MarkdownInterface' => __DIR__ . '/..' . '/michelf/php-markdown/Michelf/MarkdownInterface.php',
+        'Mobile_Detect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/Mobile_Detect.php',
         'Monolog\\ErrorHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ErrorHandler.php',
         'Monolog\\Formatter\\ChromePHPFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/ChromePHPFormatter.php',
         'Monolog\\Formatter\\ElasticaFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/ElasticaFormatter.php',
@@ -2551,6 +2557,7 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
         'Statamic\\Addons\\Markdown\\MarkdownFieldtype' => __DIR__ . '/../..' . '/bundles/Markdown/MarkdownFieldtype.php',
         'Statamic\\Addons\\Markdown\\MarkdownTags' => __DIR__ . '/../..' . '/bundles/Markdown/MarkdownTags.php',
         'Statamic\\Addons\\Member\\MemberTags' => __DIR__ . '/../..' . '/bundles/Member/MemberTags.php',
+        'Statamic\\Addons\\MobileDetect\\MobileDetectTags' => __DIR__ . '/../..' . '/../site/addons/statamic2-mobile-detect/MobileDetectTags.php',
         'Statamic\\Addons\\Nav\\NavTags' => __DIR__ . '/../..' . '/bundles/Nav/NavTags.php',
         'Statamic\\Addons\\Nav\\Tree' => __DIR__ . '/../..' . '/bundles/Nav/Tree.php',
         'Statamic\\Addons\\Nav\\TreeFactory' => __DIR__ . '/../..' . '/bundles/Nav/TreeFactory.php',
@@ -3051,6 +3058,9 @@ class ComposerStaticInit97b4036662f0cfd112c962b52e919d34
         'Statamic\\Search\\IndexNotFoundException' => __DIR__ . '/../..' . '/core/Search/IndexNotFoundException.php',
         'Statamic\\Search\\ItemResolver' => __DIR__ . '/../..' . '/core/Search/ItemResolver.php',
         'Statamic\\Search\\Search' => __DIR__ . '/../..' . '/core/Search/Search.php',
+        'Statamic\\SiteHelpers\\Filters' => __DIR__ . '/../..' . '/../site/helpers/Filters.php',
+        'Statamic\\SiteHelpers\\Modifiers' => __DIR__ . '/../..' . '/../site/helpers/Modifiers.php',
+        'Statamic\\SiteHelpers\\Tags' => __DIR__ . '/../..' . '/../site/helpers/Tags.php',
         'Statamic\\Stache\\AggregateRepository' => __DIR__ . '/../..' . '/core/Stache/AggregateRepository.php',
         'Statamic\\Stache\\Driver' => __DIR__ . '/../..' . '/core/Stache/Driver.php',
         'Statamic\\Stache\\Drivers\\AbstractDriver' => __DIR__ . '/../..' . '/core/Stache/Drivers/AbstractDriver.php',
